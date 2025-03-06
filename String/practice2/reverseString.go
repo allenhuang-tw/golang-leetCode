@@ -7,13 +7,14 @@ func main() {
 }
 
 func reverseString(s []byte) {
-
 	i := 0
 	j := len(s) - 1
 
 	for i < j {
-		j := s[i]
-		s[i] = tmp
-		tmp = j
+		tmp := s[i]
+		s[i] = s[j]
+		s[j] = tmp
+		i++
+		j--
 	}
 }
